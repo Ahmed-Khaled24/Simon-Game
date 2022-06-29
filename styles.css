@@ -55,6 +55,11 @@ h1{
     color: blue;
     grid-area: blue;
 }
+.btn-pressed{
+    background-color: grey;
+    color: grey;
+    box-shadow: 10px 10px 40px grey;
+}
 
 footer{
     font-family: 'Indie Flower', cursive;
