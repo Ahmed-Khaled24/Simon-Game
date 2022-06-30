@@ -23,3 +23,19 @@ function levelUp(){
     level++;
     document.querySelector("h1").innerText = "Level " + level;  
 }
+
+function gameOver(){
+    // Animate the screen
+    playSound("wrong");
+    document.querySelector("body").classList.add("wrong");
+    setTimeout(function(){document.querySelector("body").classList.remove("wrong");}, 200);
+    
+    // change h1
+    document.querySelector("h1").innerText = "Game Over, press any key to restart";
+
+    // reset all variables
+    level = 1;
+    compareIndex = 0;
+    UserInputs = [];
+    computerInputs = [];  
+}
