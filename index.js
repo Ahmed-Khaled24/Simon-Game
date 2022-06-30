@@ -12,3 +12,7 @@ function computerTurn(){
     playSound(computerChoice);
     computerInputs.push(computerChoice);
 }
+
+function playSound(soundName){
+    new Audio("sounds/" + soundName + ".mp3").play();
+}
