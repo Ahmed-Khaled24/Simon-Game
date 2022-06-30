@@ -49,3 +49,24 @@ document.addEventListener("keypress", function(){
     }
 });
 
+document.querySelectorAll("button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+         // Animate the click and store it in its array.
+        playSound(btn.innerText);
+        btn.classList.add("btn-pressed");  
+        setTimeout(function(){btn.classList.remove("btn-pressed")}, 100);
+        UserInputs.push(btn.innerText);
+
+        // compare user inputs with computer inputs.
+        if(this.innerText === computerInputs[compareIndex] && compareIndex+1 < computerInputs.length){
+            compareIndex++;
+        }
+        else if(this.innerText === computerInputs[compareIndex] && compareIndex+1 == computerInputs.length){
+            levelUp();
+            setTimeout(computerTurn, 500);
+        }
+        else if(this.innerText !== computerInputs[compareIndex]){
+            gameOver();
+        }
+    })
+})
