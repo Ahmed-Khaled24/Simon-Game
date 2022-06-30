@@ -29,7 +29,7 @@ function gameOver(){
     playSound("wrong");
     document.querySelector("body").classList.add("wrong");
     setTimeout(function(){document.querySelector("body").classList.remove("wrong");}, 200);
-    
+
     // change h1
     document.querySelector("h1").innerText = "Game Over, press any key to restart";
 
@@ -39,3 +39,13 @@ function gameOver(){
     UserInputs = [];
     computerInputs = [];  
 }
+
+// event listeners
+document.addEventListener("keypress", function(){
+    var h1 = document.querySelector("h1");
+    if(h1.innerText === "Press any key to start" || h1.innerText === "Game Over, press any key to restart"){
+        h1.innerText = "Level " + level;
+        setTimeout(computerTurn, 500);
+    }
+});
+
