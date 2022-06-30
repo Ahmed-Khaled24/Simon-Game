@@ -1,14 +1,17 @@
 body{ 
-    background-color: #2C3639;
+    background-color: #000B49;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr, auto, 1fr;
     grid-template-areas: "hd"
                          "buttons-container"
                          "ft";
-    gap: 50px;
+    gap: 30px;
     align-items: center;
     justify-items: center;
+}
+.wrong{
+    background-color: red;
 }
 
 h1{
@@ -16,7 +19,7 @@ h1{
     grid-area: hd;
     font-size: 3.5rem;
     color:#FAF3E3;
-    margin: 50px 0px 10px 0px;
+    margin: 20px 10px 10px 10px;
     text-align: center;
     text-shadow: 5px 5px black;
 }
