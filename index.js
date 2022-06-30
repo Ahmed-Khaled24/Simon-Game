@@ -16,3 +16,10 @@ function computerTurn(){
 function playSound(soundName){
     new Audio("sounds/" + soundName + ".mp3").play();
 }
+ 
+function levelUp(){
+    UserInputs = [];
+    compareIndex = 0;
+    level++;
+    document.querySelector("h1").innerText = "Level " + level;  
+}
